@@ -17,6 +17,6 @@ C# (backend et logique métier)
 API REST (pour l'authentification et la gestion des données)
 GitHub (gestion du code et collaboration en équipe)
 
-📌 Méthodologie Agile Scrum avec des itérations de 4h et un suivi des tâches sur GitHub Projects.
+📌 Méthodologie Agile Scrum avec des itérations de 4h et un suivi des tâches sur GitHub.
 
 👥 Équipe de développement : Adeline RANDON, Bastien MINOT
