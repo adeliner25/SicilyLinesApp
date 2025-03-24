@@ -1,0 +1,42 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SicilyLinesApp.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <!-- Image de fond -->
+    <Grid>
+        <Image Source="home-page.png"
+               Aspect="AspectFill"/>
+       
+        <!-- Contenu centré -->
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+            <!-- Logo -->
+            <Image Source="logo_home_page.png" HeightRequest="80" Aspect="AspectFit" HorizontalOptions="Center"/>
+
+            <!-- Titre "Sicily Lines" -->
+            <Label Text="Sicily Lines"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   TextColor="#ffafda"
+                   HorizontalOptions="Center"/>
+
+            <!-- Logo -->
+            <Image Source="sicily_lines_logo.png"
+                   HeightRequest="120"
+                   Aspect="AspectFit"/>
+
+            <!-- Bouton Entrer -->
+            <Button Text="ENTRER  ➝"
+                    BackgroundColor="#ffafda"
+                    TextColor="#022b21"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Clicked="OnLoginClicked"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
