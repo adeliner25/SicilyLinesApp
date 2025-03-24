@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SicilyLinesApp.LoginPage">
+
+    <Grid>
+        <!-- Image en arrière-plan -->
+        <Image Source="login-page.png"
+               Aspect="AspectFill"/>
+
+        <!-- Couche de fond semi-transparente pour améliorer la lisibilité -->
+        <BoxView BackgroundColor="Black" Opacity="0.3"
+                 VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+        <!-- ScrollView pour éviter que le clavier cache les champs -->
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+                <!-- Logo -->
+                <Image Source="logo_home_page.png" HeightRequest="80" Aspect="AspectFit" HorizontalOptions="Center"/>
+
+                <!-- Texte "Sicily Lines" -->
+                <Label Text="Sicily Lines"
+                       FontSize="28"
+                       TextColor="#ffafda"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,20"/>
+
+                <!-- Formulaire -->
+                <Frame BackgroundColor="Transparent" Padding="20"
+                       CornerRadius="15" HasShadow="True"
+                       Opacity="0.9"
+                       BorderColor="White">
+                    <VerticalStackLayout Spacing="15">
+
+                        <!-- Champ Nom d'utilisateur -->
+                        <Label Text="LOGIN" FontAttributes="Bold" FontSize="12" TextColor="White"/>
+                        <Entry x:Name="pseudo"
+                               Placeholder="Lucas"
+                               TextColor="Black"
+                               BackgroundColor="White"
+                               HeightRequest="40"
+                               Margin="0,10,0,0"/>
+
+                        <!-- Champ Mot de passe -->
+                        <Label Text="PASSWORD" FontAttributes="Bold" FontSize="12" TextColor="White"/>
+                        <Entry x:Name="pass"
+                               Placeholder="*********"
+                               IsPassword="True"
+                               TextColor="Black"
+                               BackgroundColor="White"
+                               HeightRequest="40"/>
+
+                        <!-- Bouton Login -->
+                        <Button Text="Log in"
+                                BackgroundColor="#022b21"
+                                TextColor="White"
+                                CornerRadius="10"
+                                FontAttributes="Bold"
+                                Clicked="OnLoginClicked"/>
+
+                        <!-- Liens -->
+                        <Label Text="Mot de passe oublié ?" FontSize="12"
+                               TextColor="Gray" HorizontalOptions="Center"/>
+                        <Button Text="S'inscrire" FontSize="12"
+                                BackgroundColor="#022b21"
+                                TextColor="White"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                CornerRadius="10"
+                                WidthRequest="100"
+                                Clicked="OnSignupClicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
