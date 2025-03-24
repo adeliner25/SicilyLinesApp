@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SicilyLinesApp.EditProfilePage"
+             BackgroundColor="#E5E5E5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Header avec Logo et Déconnexion -->
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*,Auto">
+                <Image Source="lotus_logo.png"
+                       HeightRequest="60"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,10"/>
+                <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xf2f5;, Color=Black, Size=30}"
+                             BackgroundColor="Transparent"
+                             Clicked="OnLogoutClicked"
+                             Grid.Column="1"
+                             Margin="0,20,0,0"/>
+            </Grid>
+
+            <!-- Titre -->
+            <Label Text="VOS COORDONNÉES"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#333333"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15" />
+
+            <!-- Formulaire -->
+            <Frame BackgroundColor="#BDBDBD" Padding="15" CornerRadius="10" HasShadow="False">
+                <StackLayout Spacing="12">
+
+                    <!-- NOM -->
+                    <Label Text="NOM" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry Text="Adeline" IsEnabled="False" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <Image Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe897;, Color=Gray, Size=20}"
+                               Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <!-- PRÉNOM -->
+                    <Label Text="PRÉNOM" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry Text="RANDON" IsEnabled="False" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <Image Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe897;, Color=Gray, Size=20}"
+                               Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <!-- TÉLÉPHONE -->
+                    <Label Text="TÉLÉPHONE" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry x:Name="PhoneEntry" Text="06.24.64.46.05" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe3c9;, Color=Black, Size=20}"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     Clicked="OnEditPhoneClicked"/>
+                    </Grid>
+
+                    <!-- EMAIL -->
+                    <Label Text="ADRESSE MAIL" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry x:Name="EmailEntry" Text="adeline25@gmail.com" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe3c9;, Color=Black, Size=20}"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     Clicked="OnEditEmailClicked"/>
+                    </Grid>
+
+                    <!-- ADRESSE -->
+                    <Label Text="ADRESSE NUMERO, RUE" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry x:Name="AddressEntry" Text="5, Rue des fleurs" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe3c9;, Color=Black, Size=20}"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     Clicked="OnEditAddressClicked"/>
+                    </Grid>
+
+                    <!-- VILLE -->
+                    <Label Text="VILLE" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry x:Name="CityEntry" Text="Versailles" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe3c9;, Color=Black, Size=20}"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     Clicked="OnEditCityClicked"/>
+                    </Grid>
+
+                    <!-- CODE POSTAL -->
+                    <Label Text="CODE POSTAL" FontSize="12" TextColor="#333333" Margin="5,0,0,0"/>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Entry x:Name="PostalCodeEntry" Text="78646" BackgroundColor="White" Margin="10,0,0,0"/>
+                        <ImageButton Source="{FontImageSource FontFamily=MaterialIcons, Glyph=&#xe3c9;, Color=Black, Size=20}"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     Clicked="OnEditPostalCodeClicked"/>
+                    </Grid>
+
+                    <!-- BOUTON ENREGISTRER -->
+                    <Button Text="ENREGISTRER"
+                            BackgroundColor="#1E88E5"
+                            TextColor="White"
+                            CornerRadius="5"
+                            Margin="0,15,0,0"
+                            Clicked="OnSaveClicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
